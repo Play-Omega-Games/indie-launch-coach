@@ -1,0 +1,32 @@
+{
+  "today": "2026-10-26",
+  "profile": {
+    "game_name": "Deepwell",
+    "stage": "polish",
+    "stores": [
+      "steam"
+    ],
+    "home_base": "steam",
+    "date_precision": "exact",
+    "launch_date": "2027-03-10",
+    "release_type": "ea",
+    "ea_1_0_date": "2027-12-01",
+    "store_page": "public",
+    "demo": "planning",
+    "team": "small",
+    "hours": "6to12",
+    "budget": "lt500",
+    "genre": "roguelike",
+    "channels": [
+      "x",
+      "discord"
+    ],
+    "assets": [
+      "capsule",
+      "screenshots",
+      "trailer"
+    ],
+    "festival": "nextfest_feb_2027",
+    "appid_created": "2026-05-01"
+  }
+}

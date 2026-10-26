@@ -1,0 +1,31 @@
+{
+  "today": "2026-10-26",
+  "profile": {
+    "game_name": "Moss & Mortar",
+    "stage": "launched",
+    "launched_on": "2026-10-16",
+    "stores": [
+      "steam"
+    ],
+    "home_base": "steam",
+    "release_type": "full",
+    "store_page": "public",
+    "demo": "have",
+    "team": "small",
+    "hours": "3to6",
+    "budget": "zero",
+    "genre": "sim",
+    "channels": [
+      "x",
+      "tiktok"
+    ],
+    "assets": [
+      "capsule",
+      "screenshots",
+      "trailer",
+      "press_kit"
+    ],
+    "festival": "none",
+    "appid_created": "2026-01-10"
+  }
+}

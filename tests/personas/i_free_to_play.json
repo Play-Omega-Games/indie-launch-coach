@@ -1,0 +1,32 @@
+{
+  "today": "2026-10-26",
+  "profile": {
+    "game_name": "Brawl Garden",
+    "stage": "polish",
+    "stores": [
+      "steam",
+      "android"
+    ],
+    "home_base": "steam",
+    "date_precision": "exact",
+    "launch_date": "2027-08-03",
+    "release_type": "free",
+    "store_page": "public",
+    "demo": "none",
+    "team": "mid",
+    "hours": "6to12",
+    "budget": "zero",
+    "genre": "multiplayer",
+    "channels": [
+      "tiktok",
+      "discord"
+    ],
+    "assets": [
+      "capsule",
+      "screenshots",
+      "trailer"
+    ],
+    "festival": "none",
+    "appid_created": "2026-06-01"
+  }
+}

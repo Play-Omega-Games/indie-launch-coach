@@ -1,0 +1,198 @@
+{
+  "verified_on": "2026-10-25",
+  "note": "Official pages only. Title is a substring the page title must contain (null means the page is script-rendered; status check only).",
+  "sources": {
+    "steam_coming_soon": {
+      "url": "https://partner.steamgames.com/doc/store/coming_soon",
+      "title_contains": "Coming Soon"
+    },
+    "steam_release": {
+      "url": "https://partner.steamgames.com/doc/store/releasing",
+      "title_contains": "Release Process"
+    },
+    "steam_review": {
+      "url": "https://partner.steamgames.com/doc/store/review_process",
+      "title_contains": "Review Process"
+    },
+    "steam_release_dates": {
+      "url": "https://partner.steamgames.com/doc/store/release_dates",
+      "title_contains": "Release Dates"
+    },
+    "steam_fee": {
+      "url": "https://partner.steamgames.com/doc/gettingstarted/appfee",
+      "title_contains": "Steam Direct Fee"
+    },
+    "steam_wishlist": {
+      "url": "https://partner.steamgames.com/doc/marketing/wishlist",
+      "title_contains": "Wishlists"
+    },
+    "steam_wishlist_reporting": {
+      "url": "https://partner.steamgames.com/doc/marketing/wishlist/reporting",
+      "title_contains": "Wishlist Reporting"
+    },
+    "steam_events": {
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events",
+      "title_contains": "Upcoming Steam Events"
+    },
+    "steam_nextfest": {
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest",
+      "title_contains": "Steam Next Fest"
+    },
+    "steam_nextfest_tips": {
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/tips",
+      "title_contains": "Steam Next Fest - Tips"
+    },
+    "steam_themed": {
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/themed_sales",
+      "title_contains": "Steam Themed Sale Events"
+    },
+    "steam_demos": {
+      "url": "https://partner.steamgames.com/doc/store/application/demos",
+      "title_contains": "Demos"
+    },
+    "steam_playtest": {
+      "url": "https://partner.steamgames.com/doc/features/playtest",
+      "title_contains": "Steam Playtest"
+    },
+    "steam_keys": {
+      "url": "https://partner.steamgames.com/doc/features/keys",
+      "title_contains": "Steam Keys"
+    },
+    "steam_curators": {
+      "url": "https://partner.steamgames.com/doc/marketing/curators",
+      "title_contains": "Curators and Curator Connect"
+    },
+    "steam_discounts": {
+      "url": "https://partner.steamgames.com/doc/marketing/discounts",
+      "title_contains": "Discounting"
+    },
+    "steam_description": {
+      "url": "https://partner.steamgames.com/doc/store/page/description",
+      "title_contains": "Store Page Written Description"
+    },
+    "steam_tags": {
+      "url": "https://partner.steamgames.com/doc/store/tags",
+      "title_contains": "Steam Tags"
+    },
+    "steam_assets": {
+      "url": "https://partner.steamgames.com/doc/store/assets/standard",
+      "title_contains": "Store Graphical Assets"
+    },
+    "steam_assets_overview": {
+      "url": "https://partner.steamgames.com/doc/store/assets",
+      "title_contains": "Graphical Assets - Overview"
+    },
+    "steam_trailer": {
+      "url": "https://partner.steamgames.com/doc/store/trailer",
+      "title_contains": "Trailers"
+    },
+    "steam_ea": {
+      "url": "https://partner.steamgames.com/doc/store/earlyaccess",
+      "title_contains": "Early Access"
+    },
+    "steam_localization": {
+      "url": "https://partner.steamgames.com/doc/store/localization",
+      "title_contains": "Localization and Languages"
+    },
+    "steam_visibility": {
+      "url": "https://partner.steamgames.com/doc/marketing/visibility",
+      "title_contains": "Visibility on Steam"
+    },
+    "steam_utm": {
+      "url": "https://partner.steamgames.com/doc/marketing/utm_analytics",
+      "title_contains": "UTM Analytics"
+    },
+    "steam_event_tools": {
+      "url": "https://partner.steamgames.com/doc/marketing/event_tools",
+      "title_contains": "Events and Announcements Tools"
+    },
+    "steam_update_rounds": {
+      "url": "https://partner.steamgames.com/doc/marketing/visibility/update_rounds",
+      "title_contains": "Update Visibility Rounds"
+    },
+    "steam_updates": {
+      "url": "https://partner.steamgames.com/doc/store/updates",
+      "title_contains": "Updating Your Game - Best Practices"
+    },
+    "steam_broadcast": {
+      "url": "https://partner.steamgames.com/doc/store/broadcast",
+      "title_contains": "Livestreaming"
+    },
+    "steam_name": {
+      "url": "https://partner.steamgames.com/doc/store/editing/name",
+      "title_contains": "Changing Your Game's Name"
+    },
+    "itch_start": {
+      "url": "https://itch.io/docs/creators/getting-started",
+      "title_contains": "Your first itch.io page"
+    },
+    "itch_faq": {
+      "url": "https://itch.io/docs/creators/faq",
+      "title_contains": "Creator FAQ"
+    },
+    "itch_design": {
+      "url": "https://itch.io/docs/creators/design",
+      "title_contains": "Designing your page"
+    },
+    "itch_jams": {
+      "url": "https://itch.io/jams",
+      "title_contains": "Game jams"
+    },
+    "epic_overview": {
+      "url": "https://dev.epicgames.com/docs/epic-games-store/get-started/get-started-overview",
+      "title_contains": null
+    },
+    "epic_onboarding": {
+      "url": "https://dev.epicgames.com/docs/epic-games-store/get-started/get-started-steps/onboarding",
+      "title_contains": null
+    },
+    "xbox_id": {
+      "url": "https://www.xbox.com/en-US/developers/id",
+      "title_contains": null
+    },
+    "nintendo_portal": {
+      "url": "https://developer.nintendo.com/",
+      "title_contains": "Nintendo Developer Portal"
+    },
+    "playstation_partners": {
+      "url": "https://partners.playstation.net/",
+      "title_contains": "PlayStation"
+    },
+    "apple_preorders": {
+      "url": "https://developer.apple.com/app-store/pre-orders/",
+      "title_contains": "pre-order"
+    },
+    "apple_product_page": {
+      "url": "https://developer.apple.com/app-store/product-page/",
+      "title_contains": "Product Page"
+    },
+    "apple_review": {
+      "url": "https://developer.apple.com/app-store/review/guidelines/",
+      "title_contains": "App Review Guidelines"
+    },
+    "play_prereg": {
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859047",
+      "title_contains": "pre-registration"
+    },
+    "play_testing": {
+      "url": "https://support.google.com/googleplay/android-developer/answer/14151465",
+      "title_contains": "testing requirements"
+    },
+    "play_release": {
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859348",
+      "title_contains": "release"
+    },
+    "play_preview_assets": {
+      "url": "https://support.google.com/googleplay/android-developer/answer/9866151",
+      "title_contains": "preview assets"
+    },
+    "us_endorsement_guides": {
+      "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255",
+      "title_contains": "16 CFR Part 255"
+    },
+    "us_can_spam_rule": {
+      "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+      "title_contains": "16 CFR Part 316"
+    }
+  }
+}

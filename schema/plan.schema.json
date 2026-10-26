@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Plan built by scripts/build_plan.py",
+  "type": "object",
+  "required": [
+    "built_on",
+    "phase",
+    "gates",
+    "tasks",
+    "this_week"
+  ],
+  "properties": {
+    "built_on": {
+      "type": "string"
+    },
+    "launch_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "launch_display": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string"
+    },
+    "sprint": {
+      "type": "boolean"
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "date",
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              "done",
+              "late",
+              "due soon",
+              "on track",
+              "undated",
+              "waiting on platform"
+            ]
+          }
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              "open",
+              "done",
+              "skipped",
+              "catch_up",
+              "skipped_by_plan",
+              "past"
+            ]
+          }
+        }
+      }
+    },
+    "this_week": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array"
+    },
+    "changes": {
+      "type": "array"
+    }
+  }
+}

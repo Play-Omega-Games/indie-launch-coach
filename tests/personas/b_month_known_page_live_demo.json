@@ -1,0 +1,32 @@
+{
+  "today": "2026-10-26",
+  "profile": {
+    "game_name": "Tidepool Tactics",
+    "stage": "polish",
+    "stores": [
+      "steam"
+    ],
+    "home_base": "steam",
+    "date_precision": "month",
+    "launch_month": "2027-05",
+    "release_type": "full",
+    "store_page": "public",
+    "demo": "planning",
+    "team": "small",
+    "hours": "6to12",
+    "budget": "lt500",
+    "genre": "strategy",
+    "channels": [
+      "x",
+      "reddit",
+      "discord"
+    ],
+    "assets": [
+      "capsule",
+      "screenshots",
+      "trailer"
+    ],
+    "festival": "nextfest_feb_2027",
+    "appid_created": "2026-03-01"
+  }
+}

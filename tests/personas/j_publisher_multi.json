@@ -1,0 +1,40 @@
+{
+  "today": "2026-10-26",
+  "profile": {
+    "game_name": "Ironvale",
+    "stage": "slice",
+    "stores": [
+      "steam",
+      "epic",
+      "playstation",
+      "xbox"
+    ],
+    "home_base": "steam",
+    "date_precision": "quarter",
+    "launch_quarter": "2027-Q4",
+    "release_type": "full",
+    "store_page": "public",
+    "demo": "have",
+    "team": "publisher",
+    "hours": "12plus",
+    "budget": "gt2500",
+    "genre": "rpg",
+    "channels": [
+      "x",
+      "youtube",
+      "instagram"
+    ],
+    "assets": [
+      "capsule",
+      "screenshots",
+      "trailer",
+      "press_kit",
+      "website"
+    ],
+    "festival": "nextfest_jun_2027",
+    "appid_created": "2026-02-01",
+    "custom_dates": {
+      "playstation_launch": "2027-11-16"
+    }
+  }
+}

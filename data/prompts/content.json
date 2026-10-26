@@ -1,0 +1,47 @@
+{
+  "note": "Content prompt ideas by phase. The coach turns one into a ready-to-edit draft for the owner to post. Never posted by the coach.",
+  "prompts": {
+    "groundwork": [
+      "Show a rough before and after of one thing you changed this week.",
+      "Share the one-sentence hook and ask which word grabs people.",
+      "Post a 10 second clip of the core action with no explanation."
+    ],
+    "reveal": [
+      "Announce the store page with your best clip and the home base link.",
+      "Show the capsule art process from sketch to final.",
+      "Explain one design decision in three sentences."
+    ],
+    "grow": [
+      "A short clip of a moment that surprised a playtester.",
+      "A bug that turned into a feature.",
+      "Ask players to choose between two options you are deciding on.",
+      "A small behind the scenes look at your workspace or tools.",
+      "A clip of the hardest part of the game."
+    ],
+    "showcase": [
+      "Tell people the demo is coming and when.",
+      "The demo is live: where to play, what to look for.",
+      "A thank-you post with something you learned from demo players."
+    ],
+    "final_approach": [
+      "Release date reminder with a fresh clip.",
+      "A short countdown post with one feature per post.",
+      "Show the launch trailer."
+    ],
+    "launch_window": [
+      "Launch announcement with the home base link.",
+      "A thank-you to everyone who played on day one.",
+      "First fix shipped: what changed."
+    ],
+    "first_month": [
+      "Answer the most common question from reviews.",
+      "Preview the first update.",
+      "Share a player creation or moment (with their permission)."
+    ],
+    "long_tail": [
+      "Update announcement.",
+      "Sale announcement when you join an event.",
+      "Anniversary or milestone post with a look back."
+    ]
+  }
+}

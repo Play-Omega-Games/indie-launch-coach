@@ -1,0 +1,2500 @@
+{
+ "note": "Effort hours are estimates. Tasks marked guideline in their why line are Omega Games advice, not platform rules.",
+ "tasks": [
+  {
+   "id": "gw_hook",
+   "title": "Write your one-sentence hook",
+   "why": "Everything you post, pitch and put on a store page grows from this line.",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 7,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "hook",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_player",
+   "title": "Describe the player you are making this for",
+   "why": "Picking one clear player makes every later choice easier: channels, tags, creators.",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 7,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_comps",
+   "title": "List five comparable games and what players praise in them",
+   "why": "Comparable games tell you your tags, your price range and which creators to approach.",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 10,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "comps",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_tags",
+   "title": "Draft your tag list from your comparable games",
+   "why": "Tags decide where a store shows your game.",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 14,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "tags",
+   "source_ids": [
+    "steam_tags"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_home_base",
+   "title": "Pick your home base link",
+   "why": "One link that every post points to keeps interest in one place you can measure.",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 3,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_channels",
+   "title": "Choose your main one or two channels",
+   "why": "Fewer channels done steadily beat many done rarely (guideline).",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 7,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_budget",
+   "title": "Set a marketing budget cap, even if it is zero",
+   "why": "A cap keeps tests small and honest. I never spend; this is for your planning.",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 14,
+   "effort_hours": 0.5,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_steam_account",
+   "title": "Set up Steamworks and pay the Steam Direct fee",
+   "why": "You need an app before a store page or keys. The fee is $100 per app and is recouped after $1,000 adjusted gross revenue.",
+   "phase": "groundwork",
+   "anchor": "CS",
+   "offset_days": -35,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_fee"
+   ],
+   "publisher_owned": false,
+   "done_if": [
+    "page_exists"
+   ]
+  },
+  {
+   "id": "gw_epic_account",
+   "title": "Create your Epic Developer Portal organization",
+   "why": "Epic onboarding includes verification that can take up to two weeks.",
+   "phase": "groundwork",
+   "anchor": "L",
+   "offset_days": -90,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "epic"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "epic_onboarding"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_itch_account",
+   "title": "Create your itch.io page as a draft",
+   "why": "A draft page lets you shape the page before anyone sees it.",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 14,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "itch"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "itch_start"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_console_apply",
+   "title": "Apply to each console program you want",
+   "why": "Console programs review applications first, so start early. Terms are shared under NDA.",
+   "phase": "groundwork",
+   "anchor": "L",
+   "offset_days": -300,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "console"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "xbox_id",
+    "nintendo_portal",
+    "playstation_partners"
+   ],
+   "publisher_owned": true,
+   "done_if": []
+  },
+  {
+   "id": "gw_mobile_accounts",
+   "title": "Set up your Apple and Google developer accounts",
+   "why": "Store accounts and new-account testing steps come before any pre-order or pre-registration.",
+   "phase": "groundwork",
+   "anchor": "L",
+   "offset_days": -200,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "mobile"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "apple_review",
+    "play_testing"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_name_check",
+   "title": "Search stores and socials for your game name",
+   "why": "A clear, searchable name saves a rename later.",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 10,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_name"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_track_sheet",
+   "title": "Start a simple numbers log (I keep it on your dashboard)",
+   "why": "Your own numbers, week by week, are the only benchmark that matters here.",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 7,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gw_settle_look",
+   "title": "Confirm the art direction and core loop are settled before revealing",
+   "why": "Players who follow early can be confused if the game changes a lot.",
+   "phase": "groundwork",
+   "anchor": "TODAY",
+   "offset_days": 30,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "stage_idea"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_coming_soon"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_capsules",
+   "title": "Make capsule art to spec, with a readable title",
+   "why": "Capsules are the first thing players see; the title must be readable.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": -21,
+   "effort_hours": 8,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": "capsule",
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_assets",
+    "steam_assets_overview"
+   ],
+   "publisher_owned": true,
+   "done_if": []
+  },
+  {
+   "id": "rv_screens",
+   "title": "Capture at least 5 gameplay screenshots (1920x1080 or larger)",
+   "why": "Screenshots must show gameplay only, no concept art or marketing text.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": -18,
+   "effort_hours": 3,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": "screenshots",
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_assets",
+    "steam_review"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_screens_generic",
+   "title": "Capture a set of clean gameplay screenshots",
+   "why": "Every store and press kit needs them.",
+   "phase": "reveal",
+   "anchor": "L",
+   "offset_days": -240,
+   "effort_hours": 3,
+   "priority": 1,
+   "platforms": [
+    "itch",
+    "epic",
+    "console",
+    "mobile",
+    "web"
+   ],
+   "requires": [],
+   "asset": "screenshots",
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_short_desc",
+   "title": "Write the short description",
+   "why": "A few hundred characters, plain text, no dates or \"now available\".",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": -16,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "store_copy",
+   "source_ids": [
+    "steam_description"
+   ],
+   "publisher_owned": false,
+   "done_if": [
+    "page_built"
+   ]
+  },
+  {
+   "id": "rv_about",
+   "title": "Write the \"About this game\" section",
+   "why": "Show the core loop and what makes it different, with screenshots or GIFs.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": -16,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "store_copy",
+   "source_ids": [
+    "steam_description",
+    "steam_review"
+   ],
+   "publisher_owned": false,
+   "done_if": [
+    "page_built"
+   ]
+  },
+  {
+   "id": "rv_tags_set",
+   "title": "Enter your tags in Steamworks, top 5 first",
+   "why": "The top 5 tags carry the most weight.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": -14,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_tags"
+   ],
+   "publisher_owned": false,
+   "done_if": [
+    "page_built"
+   ]
+  },
+  {
+   "id": "rv_trailer1",
+   "title": "Cut a short gameplay trailer",
+   "why": "The first video on your page also becomes the short looping preview Steam shows in lists.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": -10,
+   "effort_hours": 10,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": "trailer",
+   "essentials": false,
+   "draft_tool": "trailer_check",
+   "source_ids": [
+    "steam_trailer",
+    "steam_nextfest"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_store_review",
+   "title": "Run a store page review with me before submitting",
+   "why": "A second look catches missing items before Steam review does.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": -12,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "store_review",
+   "source_ids": [
+    "steam_review"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_submit_cs",
+   "title": "Submit the store page for review in Steamworks (you press the button)",
+   "why": "Steam asks for 7 business days before you want it live.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": -10,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_coming_soon"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_go_live_cs",
+   "title": "Publish as Coming Soon (you press the button)",
+   "why": "Wishlists and your Community Hub start now.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": 0,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_coming_soon"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_date_display",
+   "title": "Choose how the release date shows on Steam",
+   "why": "Exact day, month, quarter, year or Coming Soon; lists sort by the last day of the range.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": -14,
+   "effort_hours": 0.5,
+   "priority": 2,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_release_dates"
+   ],
+   "publisher_owned": false,
+   "done_if": [
+    "page_built"
+   ]
+  },
+  {
+   "id": "rv_epic_page",
+   "title": "Publish your Epic product page for early awareness",
+   "why": "Epic recommends publishing it at your announcement.",
+   "phase": "reveal",
+   "anchor": "L",
+   "offset_days": -180,
+   "effort_hours": 3,
+   "priority": 2,
+   "platforms": [
+    "epic"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "epic_overview"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_itch_page",
+   "title": "Make your itch.io page public or public restricted",
+   "why": "Public restricted lets people follow before anything is for sale.",
+   "phase": "reveal",
+   "anchor": "L",
+   "offset_days": -240,
+   "effort_hours": 2,
+   "priority": 2,
+   "platforms": [
+    "itch"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "itch_start",
+    "itch_design"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_website",
+   "title": "Put up a one-page website",
+   "why": "A page you own, with the trailer, home base link and press kit link.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": 7,
+   "effort_hours": 4,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": "website",
+   "essentials": false,
+   "draft_tool": "website",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_presskit",
+   "title": "Build press kit version 1",
+   "why": "When someone asks for details, you send one link.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": 14,
+   "effort_hours": 3,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": "press_kit",
+   "essentials": true,
+   "draft_tool": "press_kit",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_utm",
+   "title": "Make one tracking link per channel",
+   "why": "Steam reports wishlists and purchases per tracking link for signed-in visitors.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": 1,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "utm",
+   "source_ids": [
+    "steam_utm"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_announce",
+   "title": "Draft your reveal announcement for each channel",
+   "why": "A reveal is a good moment to ask for the first wishlists or follows.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": 0,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "post",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_profiles",
+   "title": "Tidy your channel profiles with the home base link",
+   "why": "Every profile should point to the same place.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": -3,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_community_hub",
+   "title": "Post a welcome note in your Steam Community Hub",
+   "why": "The hub opens with your Coming Soon page.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": 3,
+   "effort_hours": 0.5,
+   "priority": 3,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "post",
+   "source_ids": [
+    "steam_coming_soon"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_localization",
+   "title": "Decide which languages you will support at launch",
+   "why": "Store text and screenshots can be localized; pick only what you can support.",
+   "phase": "reveal",
+   "anchor": "L",
+   "offset_days": -200,
+   "effort_hours": 1,
+   "priority": 3,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_localization"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_newsletter",
+   "title": "Start an email list sign-up on your website",
+   "why": "You own this list. Commercial emails need a postal address and an easy opt-out in the US.",
+   "phase": "reveal",
+   "anchor": "CS",
+   "offset_days": 14,
+   "effort_hours": 2,
+   "priority": 3,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "newsletter",
+   "source_ids": [
+    "us_can_spam_rule"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "rv_mobile_listing",
+   "title": "Prepare store listing art and preview video for mobile",
+   "why": "Each store has its own listing assets.",
+   "phase": "reveal",
+   "anchor": "L",
+   "offset_days": -120,
+   "effort_hours": 4,
+   "priority": 2,
+   "platforms": [
+    "mobile"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "apple_product_page",
+    "play_preview_assets"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_rhythm",
+   "title": "Set a posting rhythm you can keep for months",
+   "why": "Steady and small beats bursts you cannot repeat (guideline).",
+   "phase": "grow",
+   "anchor": "CS",
+   "offset_days": 7,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_clip_bank",
+   "title": "Capture a bank of 10 short gameplay clips",
+   "why": "A ready bank makes every content prompt fast.",
+   "phase": "grow",
+   "anchor": "CS",
+   "offset_days": 21,
+   "effort_hours": 3,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "post",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_devlog",
+   "title": "Write a devlog post about one real decision",
+   "why": "Honest behind the scenes posts give people a reason to follow.",
+   "phase": "grow",
+   "anchor": "CS",
+   "offset_days": 30,
+   "effort_hours": 2,
+   "priority": 3,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "post",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_playtest",
+   "title": "Run a playtest",
+   "why": "Steam Playtest is a separate app, so it does not touch reviews or wishlists. itch.io works too.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -180,
+   "effort_hours": 4,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_playtest",
+    "itch_start"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_playtest_feedback",
+   "title": "Turn playtest feedback into a short change list",
+   "why": "Players notice when you act on what they said.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -170,
+   "effort_hours": 2,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_discord",
+   "title": "Open a community space, if you can tend it weekly",
+   "why": "An empty space hurts more than none (guideline).",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -160,
+   "effort_hours": 2,
+   "priority": 3,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_creator_list",
+   "title": "Build a list of 30 creators who play games like yours",
+   "why": "Personal outreach to the right people beats mass outreach (guideline).",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -150,
+   "effort_hours": 4,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "creator_finder",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_press_list",
+   "title": "Build a list of 15 outlets and writers who cover your genre",
+   "why": "Look at who covered your comparable games.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -140,
+   "effort_hours": 3,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "creator_finder",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_curators",
+   "title": "Shortlist Steam Curators that cover your tags",
+   "why": "Curator Connect sends review copies inside Steam with a personal note.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -60,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_curators"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_themed",
+   "title": "Check upcoming Steam themed events that match your game",
+   "why": "Unreleased games and demos can appear in themed events that fit the theme.",
+   "phase": "grow",
+   "anchor": "TODAY",
+   "offset_days": 7,
+   "effort_hours": 0.5,
+   "priority": 2,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_themed",
+    "steam_events"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_jams",
+   "title": "Look at itch.io jams that fit a small side project",
+   "why": "A jam game can be a low-cost way to meet players (guideline).",
+   "phase": "grow",
+   "anchor": "TODAY",
+   "offset_days": 21,
+   "effort_hours": 0.5,
+   "priority": 3,
+   "platforms": [
+    "itch"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "itch_jams"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_paid_test",
+   "title": "Plan a small paid test with a hard cap",
+   "why": "Test one channel with one tracking link; you buy, I draft the ad copy and track your numbers.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -150,
+   "effort_hours": 2,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "paid"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "post",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_paid_review",
+   "title": "Review the paid test with your own numbers",
+   "why": "Keep, change or stop based on what you entered.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -130,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "paid"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_monthly_update",
+   "title": "Post a monthly progress update on your store page",
+   "why": "Store announcements keep the page alive for followers.",
+   "phase": "grow",
+   "anchor": "CS",
+   "offset_days": 30,
+   "effort_hours": 1,
+   "priority": 3,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "post",
+   "source_ids": [
+    "steam_event_tools"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_keep_cut",
+   "title": "First keep-or-cut review of your channels",
+   "why": "After four entries per channel, compare channels using your own numbers.",
+   "phase": "grow",
+   "anchor": "CS",
+   "offset_days": 35,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_presskit2",
+   "title": "Refresh the press kit with new screenshots and trailer",
+   "why": "Old assets make a game look older than it is.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -90,
+   "effort_hours": 1,
+   "priority": 3,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "press_kit",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_ea_questionnaire",
+   "title": "Draft your Early Access answers",
+   "why": "Be clear about what exists now and what is planned.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -90,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "ea"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "ea",
+   "source_ids": [
+    "steam_ea"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_ea_trailer",
+   "title": "Make sure a gameplay trailer is up for Early Access",
+   "why": "Steam asks for at least a gameplay trailer for Early Access.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -60,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "ea"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_ea"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_android_testing",
+   "title": "Finish Google Play testing requirements if they apply to you",
+   "why": "New personal accounts must meet them before pre-registration or production.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -120,
+   "effort_hours": 3,
+   "priority": 1,
+   "platforms": [
+    "android"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "play_testing"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_ios_preorder",
+   "title": "Decide whether to open App Store pre-orders",
+   "why": "Pre-orders let people order early and the app downloads at release.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -150,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "ios"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "apple_preorders"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_android_prereg",
+   "title": "Decide whether to run Google Play pre-registration",
+   "why": "Pre-registered players get a notice at launch.",
+   "phase": "grow",
+   "anchor": "L",
+   "offset_days": -90,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "android"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "play_prereg"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "gr_console_dates",
+   "title": "Enter your console dates as you get them",
+   "why": "I plan around your platform dates; I do not guess them.",
+   "phase": "grow",
+   "anchor": "TODAY",
+   "offset_days": 14,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "console"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_register",
+   "title": "Register for your chosen Next Fest (from the base game)",
+   "why": "Registration is done on the base game, not the demo.",
+   "phase": "showcase",
+   "anchor": "F_REG",
+   "offset_days": -7,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_nextfest"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_trailer_ready",
+   "title": "Have a public trailer on your store page before the registration deadline",
+   "why": "Needed to be considered for the official festival trailer.",
+   "phase": "showcase",
+   "anchor": "F_REG",
+   "offset_days": -3,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_nextfest"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_demo_app",
+   "title": "Set up the demo app in Steamworks",
+   "why": "A demo is its own app tied to your base game.",
+   "phase": "showcase",
+   "anchor": "F_ALL",
+   "offset_days": -21,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_demos"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_demo_submit",
+   "title": "Submit demo build and store items for review",
+   "why": "Edition deadlines are firm; leave time to fix and resubmit.",
+   "phase": "showcase",
+   "anchor": "F_ALL",
+   "offset_days": -3,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_nextfest"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_press_preview",
+   "title": "Decide whether your demo is live for Press Preview",
+   "why": "Releasing it makes it public for everyone, not only press.",
+   "phase": "showcase",
+   "anchor": "F_PRESS",
+   "offset_days": -7,
+   "effort_hours": 0.5,
+   "priority": 2,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_nextfest"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_qa",
+   "title": "Do your own QA pass on the demo",
+   "why": "Build review checks it runs, not that it is bug free.",
+   "phase": "showcase",
+   "anchor": "F",
+   "offset_days": -10,
+   "effort_hours": 4,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_nextfest"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_demo_live",
+   "title": "Set the demo live before the festival starts (you press the button)",
+   "why": "Give yourself time to check it works.",
+   "phase": "showcase",
+   "anchor": "F",
+   "offset_days": -1,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_nextfest"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_stream",
+   "title": "Decide on festival livestreams (optional)",
+   "why": "Optional. If you stream, test it before the festival.",
+   "phase": "showcase",
+   "anchor": "F",
+   "offset_days": -7,
+   "effort_hours": 1,
+   "priority": 3,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_broadcast"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_festival_posts",
+   "title": "Draft festival posts for each day",
+   "why": "Tell people where to play and what to look for.",
+   "phase": "showcase",
+   "anchor": "F",
+   "offset_days": -3,
+   "effort_hours": 2,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "post",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_creator_demo",
+   "title": "Send demo invites to creators on your list (you send)",
+   "why": "A playable demo is an easy yes for a creator.",
+   "phase": "showcase",
+   "anchor": "F",
+   "offset_days": -14,
+   "effort_hours": 3,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "outreach",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_after",
+   "title": "Write down what you learned from the festival",
+   "why": "Your own before and after numbers guide the final approach.",
+   "phase": "showcase",
+   "anchor": "F",
+   "offset_days": 10,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "sc_demo_up",
+   "title": "Decide how long the demo stays up after the festival",
+   "why": "Players dislike demos that vanish without warning; tell them your plan.",
+   "phase": "showcase",
+   "anchor": "F",
+   "offset_days": 8,
+   "effort_hours": 0.5,
+   "priority": 3,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "festival"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_nextfest"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "dm_demo_release",
+   "title": "Release your demo (you press the button)",
+   "why": "A demo lets people try before they wishlist or buy.",
+   "phase": "showcase",
+   "anchor": "D",
+   "offset_days": 0,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "demo_planned"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "dm_demo_notice",
+   "title": "Send the one-time demo notice to wishlisters (you press it)",
+   "why": "Once per game, within two weeks of the demo release.",
+   "phase": "showcase",
+   "anchor": "D",
+   "offset_days": 7,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "demo_planned"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_wishlist"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "dm_demo_posts",
+   "title": "Draft demo launch posts",
+   "why": "Point people to the demo and the home base link.",
+   "phase": "showcase",
+   "anchor": "D",
+   "offset_days": 0,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "demo_planned"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "post",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_store_final",
+   "title": "Final store page pass with me",
+   "why": "Only show what will be in the launch build.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -35,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "store_review",
+   "source_ids": [
+    "steam_review"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_tags_final",
+   "title": "Check tags: at least 5, ideally up to 20",
+   "why": "Required before launch.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -21,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_tags"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_build_submit",
+   "title": "Submit the launch build for review (recommended date)",
+   "why": "Leaves room to fix and resubmit before the 7 business day minimum.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -21,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_release",
+    "steam_review"
+   ],
+   "publisher_owned": true,
+   "done_if": []
+  },
+  {
+   "id": "fa_date_confirm",
+   "title": "Confirm the release date before it locks",
+   "why": "After the lock you cannot move the Steam date.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -17,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_release_dates"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_price",
+   "title": "Set your price",
+   "why": "Pricing permission is needed for release in Steamworks.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -30,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "not_free"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_release"
+   ],
+   "publisher_owned": true,
+   "done_if": []
+  },
+  {
+   "id": "fa_launch_discount",
+   "title": "Decide on a launch discount",
+   "why": "Steam allows 7 to 14 days, at most 40%, set before release.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -14,
+   "effort_hours": 0.5,
+   "priority": 2,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "not_free"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_discounts"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_keys",
+   "title": "Request creator and press keys",
+   "why": "Pre-release keys are for small betas and press or creator access, never for sale.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -28,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_keys"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_curator_connect",
+   "title": "Send review copies with Curator Connect (you send)",
+   "why": "A personal note to curators who cover your tags.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -14,
+   "effort_hours": 2,
+   "priority": 2,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "outreach",
+   "source_ids": [
+    "steam_curators"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_creator_outreach",
+   "title": "Personal emails to creators on your list (you send)",
+   "why": "One email per person, written for them.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -28,
+   "effort_hours": 4,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "outreach",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_press_outreach",
+   "title": "Pitch emails to writers and outlets (you send)",
+   "why": "Send early enough for them to plan coverage.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -21,
+   "effort_hours": 3,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "outreach",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_followups",
+   "title": "Follow-up drafts for anyone who has not replied (you send)",
+   "why": "One polite follow-up, then let it go.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -10,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "outreach",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_launch_trailer",
+   "title": "Finish the launch trailer",
+   "why": "Put the newest trailer first on your page.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -14,
+   "effort_hours": 8,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "trailer_check",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_run_sheet",
+   "title": "Build the launch-day run sheet with me",
+   "why": "Who does what, hour by hour, on the day.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -7,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "run_sheet",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_launch_posts",
+   "title": "Draft launch announcements for every channel",
+   "why": "Ready to copy and post when you press release.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -5,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "post",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_newsletter",
+   "title": "Draft the launch email to your list (you send)",
+   "why": "Your own list hears first.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -3,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "newsletter",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_presskit_final",
+   "title": "Final press kit update with price, date and key art",
+   "why": "Press needs the facts in one place.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -21,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "press_kit",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_epic_review",
+   "title": "Submit for Epic final review",
+   "why": "Final review comes after onboarding and configuration.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -30,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "epic"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "epic_overview"
+   ],
+   "publisher_owned": true,
+   "done_if": []
+  },
+  {
+   "id": "fa_mobile_review",
+   "title": "Submit for App Review and Play review",
+   "why": "Store review comes before release or pre-orders.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -21,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "mobile"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "apple_review",
+    "play_release"
+   ],
+   "publisher_owned": true,
+   "done_if": []
+  },
+  {
+   "id": "fa_itch_release",
+   "title": "Prepare the itch.io release files and page",
+   "why": "No review step, so test downloads yourself.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -7,
+   "effort_hours": 2,
+   "priority": 2,
+   "platforms": [
+    "itch"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "itch_start"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_ea_1_0",
+   "title": "Plan your Early Access 1.0 date display",
+   "why": "Steam lets Early Access games show a planned 1.0 date.",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -14,
+   "effort_hours": 0.5,
+   "priority": 3,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "ea"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_release_dates"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fa_support",
+   "title": "Set up a simple way for players to report bugs",
+   "why": "Fast, visible fixes in week one matter (guideline).",
+   "phase": "final_approach",
+   "anchor": "L",
+   "offset_days": -10,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lw_check",
+   "title": "Day before: check build, page, price, discount, run sheet",
+   "why": "Catch surprises a day early.",
+   "phase": "launch_window",
+   "anchor": "L",
+   "offset_days": -1,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lw_release",
+   "title": "Release (you press \"Release App\" or your store's button)",
+   "why": "Nothing releases by itself.",
+   "phase": "launch_window",
+   "anchor": "L",
+   "offset_days": 0,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_release"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lw_posts",
+   "title": "Post your launch announcements (you post)",
+   "why": "Same hour across your channels.",
+   "phase": "launch_window",
+   "anchor": "L",
+   "offset_days": 0,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "post",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lw_store_announce",
+   "title": "Post a launch announcement on your store page",
+   "why": "Followers see store announcements.",
+   "phase": "launch_window",
+   "anchor": "L",
+   "offset_days": 0,
+   "effort_hours": 0.5,
+   "priority": 2,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "post",
+   "source_ids": [
+    "steam_event_tools"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lw_replies",
+   "title": "Reply to comments and reviews for the first 48 hours",
+   "why": "People notice a developer who answers.",
+   "phase": "launch_window",
+   "anchor": "L",
+   "offset_days": 1,
+   "effort_hours": 3,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "review_reply",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lw_thanks",
+   "title": "Thank creators who covered the game (you send)",
+   "why": "A short thank-you keeps the door open.",
+   "phase": "launch_window",
+   "anchor": "L",
+   "offset_days": 3,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "outreach",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lw_patch",
+   "title": "Ship and announce the first fix if needed",
+   "why": "Clear patch notes build trust.",
+   "phase": "launch_window",
+   "anchor": "L",
+   "offset_days": 4,
+   "effort_hours": 3,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "patch_notes",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lw_numbers",
+   "title": "Enter launch week numbers",
+   "why": "Your own launch numbers are your future benchmark.",
+   "phase": "launch_window",
+   "anchor": "L",
+   "offset_days": 7,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fm_reviews",
+   "title": "Weekly review replies",
+   "why": "Thank, answer, and note what to fix.",
+   "phase": "first_month",
+   "anchor": "L",
+   "offset_days": 10,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": "review_reply",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fm_update",
+   "title": "Plan and announce the first content or quality update",
+   "why": "A visible update gives people a reason to come back.",
+   "phase": "first_month",
+   "anchor": "L",
+   "offset_days": 21,
+   "effort_hours": 2,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "patch_notes",
+   "source_ids": [
+    "steam_updates",
+    "steam_update_rounds"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fm_sale_plan",
+   "title": "Plan your first discount and seasonal sale",
+   "why": "No regular discounts in the first 30 days; seasonal sales need 30 days since release.",
+   "phase": "first_month",
+   "anchor": "L",
+   "offset_days": 25,
+   "effort_hours": 1,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [
+    "not_free"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_discounts",
+    "steam_events"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fm_retro",
+   "title": "Launch retrospective in your own numbers",
+   "why": "What worked, what did not, what to keep.",
+   "phase": "first_month",
+   "anchor": "L",
+   "offset_days": 30,
+   "effort_hours": 1,
+   "priority": 1,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "fm_creators2",
+   "title": "Second round of creator outreach (you send)",
+   "why": "Reach people who prefer released games.",
+   "phase": "first_month",
+   "anchor": "L",
+   "offset_days": 20,
+   "effort_hours": 3,
+   "priority": 3,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": "outreach",
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lt_events",
+   "title": "Check Steam seasonal and themed events each month",
+   "why": "Events are free visibility if your game fits.",
+   "phase": "long_tail",
+   "anchor": "L",
+   "offset_days": 35,
+   "effort_hours": 0.5,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": true,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_events",
+    "steam_themed"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lt_discount_ladder",
+   "title": "Plan a gentle discount ladder",
+   "why": "Steam suggests easing into discounts over time.",
+   "phase": "long_tail",
+   "anchor": "L",
+   "offset_days": 45,
+   "effort_hours": 0.5,
+   "priority": 2,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "not_free"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_discounts"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lt_update_cadence",
+   "title": "Pick an update cadence you can keep",
+   "why": "Updates bring players back and can earn extra visibility.",
+   "phase": "long_tail",
+   "anchor": "L",
+   "offset_days": 40,
+   "effort_hours": 0.5,
+   "priority": 2,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_update_rounds"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lt_ea_graduation",
+   "title": "Plan the 1.0 release as its own launch",
+   "why": "Wishlisters are notified again at 1.0.",
+   "phase": "long_tail",
+   "anchor": "L1",
+   "offset_days": -56,
+   "effort_hours": 2,
+   "priority": 1,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [
+    "ea"
+   ],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_wishlist"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lt_next",
+   "title": "Write down what you would repeat for your next game",
+   "why": "Your next launch starts with this one.",
+   "phase": "long_tail",
+   "anchor": "L",
+   "offset_days": 60,
+   "effort_hours": 1,
+   "priority": 3,
+   "platforms": [
+    "all"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [],
+   "publisher_owned": false,
+   "done_if": []
+  },
+  {
+   "id": "lt_localize",
+   "title": "Consider adding languages based on where your players are",
+   "why": "Steam shows regional wishlist and sales reports.",
+   "phase": "long_tail",
+   "anchor": "L",
+   "offset_days": 75,
+   "effort_hours": 1,
+   "priority": 3,
+   "platforms": [
+    "steam"
+   ],
+   "requires": [],
+   "asset": null,
+   "essentials": false,
+   "draft_tool": null,
+   "source_ids": [
+    "steam_wishlist",
+    "steam_localization"
+   ],
+   "publisher_owned": false,
+   "done_if": []
+  }
+ ]
+}

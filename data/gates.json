@@ -1,0 +1,170 @@
+{
+  "verified_on": "2026-10-25",
+  "business_days": "Mon to Fri, skipping US federal holidays (an estimate of the reviewer calendar)",
+  "gates": [
+    {
+      "id": "steam_store_submit",
+      "platform": "steam",
+      "title": "Submit your Steam store page for review",
+      "rule": "cs_minus_business_days",
+      "value": 7,
+      "kind": "rule",
+      "source": "steam_coming_soon",
+      "text": "Steam asks for at least 7 business days between submitting the store page and when you want it live. Review itself usually takes 3 to 5 business days."
+    },
+    {
+      "id": "steam_coming_soon",
+      "platform": "steam",
+      "title": "Store page public as Coming Soon",
+      "rule": "cs_target",
+      "latest_rule": "L_minus_days",
+      "value": 14,
+      "kind": "rule",
+      "source": "steam_coming_soon",
+      "text": "A new game must be Coming Soon for at least two weeks before release. Earlier is fine: Steam notes little downside to a long Coming Soon period unless the game changes a lot."
+    },
+    {
+      "id": "steam_date_lock",
+      "platform": "steam",
+      "title": "Last day to change your Steam release date",
+      "rule": "L_minus_days",
+      "value": 14,
+      "kind": "rule",
+      "source": "steam_release_dates",
+      "text": "You can change the date until two weeks before it. Inside that window it is locked."
+    },
+    {
+      "id": "steam_tags",
+      "platform": "steam",
+      "title": "At least 5 tags set (up to 20 recommended)",
+      "rule": "L_minus_days",
+      "value": 14,
+      "kind": "rule",
+      "source": "steam_tags",
+      "text": "Steam requires at least 5 tags before launch and recommends up to 20. Your top 5 carry the most weight."
+    },
+    {
+      "id": "steam_build_submit",
+      "platform": "steam",
+      "title": "Submit your launch build for review",
+      "rule": "L_minus_business_days",
+      "value": 7,
+      "recommended_days_before": 21,
+      "kind": "rule",
+      "source": "steam_release",
+      "text": "Plan at least 7 business days for build review, after the store page has been submitted. We suggest about 3 weeks ahead (guideline)."
+    },
+    {
+      "id": "steam_launch_discount",
+      "platform": "steam",
+      "title": "Decide on a launch discount (optional)",
+      "rule": "L_minus_days",
+      "value": 1,
+      "kind": "rule",
+      "requires": [
+        "not_free"
+      ],
+      "source": "steam_discounts",
+      "text": "Set before release if you want one: 7 to 14 days, at most 40%. Steam generally suggests about 10% to 15%."
+    },
+    {
+      "id": "steam_release_button",
+      "platform": "steam",
+      "title": "Press \"Release App\" in Steamworks (you do this)",
+      "rule": "L_minus_days",
+      "value": 0,
+      "kind": "rule",
+      "source": "steam_release",
+      "text": "Approved games do not release themselves. You press the button at the moment you choose."
+    },
+    {
+      "id": "steam_keys_wait",
+      "platform": "steam",
+      "title": "Create your Steam app so keys are ready in time",
+      "rule": "keys_wait",
+      "value": 21,
+      "keys_needed_days_before_L": 28,
+      "kind": "rule",
+      "source": "steam_keys",
+      "text": "First-time Steam developers wait three weeks after creating an app before requesting keys. Creator keys are needed about 4 weeks before launch (guideline)."
+    },
+    {
+      "id": "steam_demo_notice",
+      "platform": "steam",
+      "title": "Send the one-time demo notice to wishlisters",
+      "rule": "D_plus_days",
+      "value": 14,
+      "kind": "rule",
+      "requires": [
+        "demo"
+      ],
+      "source": "steam_wishlist",
+      "text": "Once per game, you can notify wishlisters about a free demo, within two weeks of the demo release. You press the button."
+    },
+    {
+      "id": "steam_discount_cooldown",
+      "platform": "steam",
+      "title": "First regular discount allowed",
+      "rule": "L_plus_days",
+      "value": 30,
+      "kind": "rule",
+      "requires": [
+        "not_free"
+      ],
+      "source": "steam_discounts",
+      "text": "Apart from the launch discount, no discounts in the first 30 days after release (Early Access and 1.0 both count)."
+    },
+    {
+      "id": "steam_first_seasonal_sale",
+      "platform": "steam",
+      "title": "First Steam seasonal sale you can join",
+      "rule": "first_seasonal_sale",
+      "value": 30,
+      "kind": "rule",
+      "requires": [
+        "not_free"
+      ],
+      "source": "steam_events",
+      "text": "Seasonal sales are open to games released at least 30 days before the sale starts."
+    },
+    {
+      "id": "epic_onboarding",
+      "platform": "epic",
+      "title": "Start Epic Games Store onboarding",
+      "rule": "L_minus_days",
+      "value": 75,
+      "kind": "rule",
+      "source": "epic_onboarding",
+      "text": "Epic says the admin part can take up to 10 business days and trader, tax and payout verification up to two weeks, before final review. Final review time is not published, so this date adds a buffer (guideline). Fee: $100 per product, recouped after $1,000 in revenue."
+    },
+    {
+      "id": "ios_preorder_window",
+      "platform": "ios",
+      "title": "Earliest day to open App Store pre-orders",
+      "rule": "L_minus_days",
+      "value": 180,
+      "kind": "rule",
+      "source": "apple_preorders",
+      "text": "For a brand-new app, the release can be 2 to 180 days after the pre-order is published. App Review comes first."
+    },
+    {
+      "id": "android_prereg_window",
+      "platform": "android",
+      "title": "Earliest day to start Google Play pre-registration",
+      "rule": "L_minus_days",
+      "value": 90,
+      "kind": "rule",
+      "source": "play_prereg",
+      "text": "Pre-registration lasts at most 90 days. Personal developer accounts created after Nov 13, 2023 must meet testing requirements first."
+    },
+    {
+      "id": "console_dates",
+      "platform": "console",
+      "title": "Your console submission and release dates",
+      "rule": "owner_dates",
+      "kind": "rule",
+      "source": null,
+      "text": "Console certification steps and timelines are shared by each platform under NDA. Enter your dates and I will plan around them."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "today": "2026-10-26",
+  "profile": {
+    "game_name": "Starfold",
+    "stage": "slice",
+    "stores": [
+      "steam",
+      "switch",
+      "ios"
+    ],
+    "home_base": "steam",
+    "date_precision": "exact",
+    "launch_date": "2027-09-14",
+    "release_type": "full",
+    "store_page": "built",
+    "demo": "have",
+    "team": "mid",
+    "hours": "12plus",
+    "budget": "500to2500",
+    "genre": "roguelike",
+    "channels": [
+      "x",
+      "youtube",
+      "discord"
+    ],
+    "assets": [
+      "capsule",
+      "screenshots"
+    ],
+    "festival": "nextfest_jun_2027",
+    "custom_dates": {
+      "switch_launch": null
+    }
+  }
+}

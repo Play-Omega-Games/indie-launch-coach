@@ -1,0 +1,185 @@
+{
+  "note": "Tag hints are starting points to check against your comparable games, not rules.",
+  "genres": {
+    "action": {
+      "label": "Action",
+      "tag_hints": [
+        "Action",
+        "Shooter",
+        "Platformer",
+        "Hack and Slash",
+        "Fast-Paced"
+      ],
+      "themes": [
+        "a 10 second skill moment",
+        "a near miss",
+        "a boss pattern"
+      ],
+      "creator_search": [
+        "action indie",
+        "new indie action games"
+      ]
+    },
+    "roguelike": {
+      "label": "Roguelike or roguelite",
+      "tag_hints": [
+        "Roguelike",
+        "Roguelite",
+        "Procedural Generation",
+        "Deckbuilding",
+        "Replay Value"
+      ],
+      "themes": [
+        "a run that went wrong",
+        "a broken build",
+        "a new item"
+      ],
+      "creator_search": [
+        "roguelike",
+        "roguelite run"
+      ]
+    },
+    "strategy": {
+      "label": "Strategy or tactics",
+      "tag_hints": [
+        "Strategy",
+        "Turn-Based Tactics",
+        "Real Time Tactics",
+        "RTS",
+        "Grand Strategy"
+      ],
+      "themes": [
+        "a clever play",
+        "a map reveal",
+        "a unit spotlight"
+      ],
+      "creator_search": [
+        "indie strategy",
+        "tactics game"
+      ]
+    },
+    "sim": {
+      "label": "Sim, management or cozy",
+      "tag_hints": [
+        "Simulation",
+        "Management",
+        "Cozy",
+        "Building",
+        "Relaxing"
+      ],
+      "themes": [
+        "before and after",
+        "a satisfying loop",
+        "a timelapse"
+      ],
+      "creator_search": [
+        "cozy games",
+        "management sim"
+      ]
+    },
+    "puzzle": {
+      "label": "Puzzle or casual",
+      "tag_hints": [
+        "Puzzle",
+        "Casual",
+        "Logic",
+        "Relaxing",
+        "Minimalist"
+      ],
+      "themes": [
+        "can you solve this one",
+        "the aha moment",
+        "a level idea"
+      ],
+      "creator_search": [
+        "puzzle games",
+        "indie puzzle"
+      ]
+    },
+    "story": {
+      "label": "Story or adventure",
+      "tag_hints": [
+        "Adventure",
+        "Story Rich",
+        "Narrative",
+        "Exploration",
+        "Atmospheric"
+      ],
+      "themes": [
+        "a character line",
+        "a place",
+        "a choice"
+      ],
+      "creator_search": [
+        "narrative games",
+        "story rich indie"
+      ]
+    },
+    "rpg": {
+      "label": "RPG",
+      "tag_hints": [
+        "RPG",
+        "Action RPG",
+        "JRPG",
+        "Party-Based RPG",
+        "Character Customization"
+      ],
+      "themes": [
+        "a build",
+        "a quest hook",
+        "a character"
+      ],
+      "creator_search": [
+        "indie rpg",
+        "new rpg"
+      ]
+    },
+    "horror": {
+      "label": "Horror",
+      "tag_hints": [
+        "Horror",
+        "Psychological Horror",
+        "Survival Horror",
+        "Atmospheric",
+        "Dark"
+      ],
+      "themes": [
+        "a jump scare without spoilers",
+        "a sound",
+        "a hallway"
+      ],
+      "creator_search": [
+        "indie horror",
+        "horror let's play"
+      ]
+    },
+    "multiplayer": {
+      "label": "Multiplayer or co-op",
+      "tag_hints": [
+        "Multiplayer",
+        "Online Co-Op",
+        "Local Co-Op",
+        "PvP",
+        "Party Game"
+      ],
+      "themes": [
+        "a funny fail with friends",
+        "a clutch moment",
+        "a team play"
+      ],
+      "creator_search": [
+        "co-op games",
+        "games to play with friends"
+      ]
+    },
+    "other": {
+      "label": "Something else",
+      "tag_hints": [],
+      "themes": [
+        "what makes it different",
+        "a behind the scenes moment"
+      ],
+      "creator_search": []
+    }
+  }
+}

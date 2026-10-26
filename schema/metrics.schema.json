@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Owner numbers. Every entry has a date and a source.",
+  "type": "object",
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "date",
+          "channel",
+          "metric",
+          "value",
+          "source"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "channel": {
+            "type": "string"
+          },
+          "metric": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          },
+          "source": {
+            "enum": [
+              "owner_entered",
+              "connector_read"
+            ]
+          },
+          "hours_spent": {
+            "type": "number"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "channel",
+          "verdict",
+          "date",
+          "reason"
+        ],
+        "properties": {
+          "verdict": {
+            "enum": [
+              "keep",
+              "test_more",
+              "cut"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "today": "2026-10-26",
+  "profile": {
+    "game_name": "Rushjob",
+    "stage": "polish",
+    "stores": [
+      "steam"
+    ],
+    "home_base": "steam",
+    "date_precision": "exact",
+    "launch_date": "2026-11-30",
+    "release_type": "full",
+    "store_page": "none",
+    "demo": "none",
+    "team": "solo",
+    "hours": "6to12",
+    "budget": "zero",
+    "genre": "action",
+    "channels": [
+      "x"
+    ],
+    "assets": [],
+    "festival": "ask"
+  }
+}

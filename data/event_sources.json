@@ -1,0 +1,42 @@
+{
+  "note": "Official pages the coach reads live in its weekly deadline watch. Never treat the snapshot as live.",
+  "pages": [
+    {
+      "id": "steam_upcoming_events",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events",
+      "what": "Next Fest editions, seasonal sales, themed fests",
+      "parse": "steam_upcoming"
+    },
+    {
+      "id": "nextfest_oct_2026",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
+      "what": "Next Fest October 2026 edition dates",
+      "parse": "nextfest_edition"
+    },
+    {
+      "id": "nextfest_feb_2027",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/feb_2027",
+      "what": "Next Fest February 2027 edition dates",
+      "parse": "nextfest_edition"
+    },
+    {
+      "id": "nextfest_jun_2027",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/june_2027",
+      "what": "Next Fest June 2027 edition dates",
+      "parse": "nextfest_edition"
+    },
+    {
+      "id": "steam_themed_sales",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/themed_sales",
+      "what": "Themed event rules",
+      "parse": null
+    },
+    {
+      "id": "itch_jams",
+      "url": "https://itch.io/jams",
+      "what": "Current game jams",
+      "parse": null
+    }
+  ],
+  "owner_events": "Owners can add their own events (showcases, conventions, crowdfunding). Each needs the official page link and the date it was read."
+}

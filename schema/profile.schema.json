@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Owner profile",
+  "type": "object",
+  "required": [
+    "stage",
+    "stores",
+    "date_precision",
+    "hours"
+  ],
+  "properties": {
+    "game_name": {
+      "type": "string"
+    },
+    "stage": {
+      "enum": [
+        "idea",
+        "slice",
+        "polish",
+        "launched"
+      ]
+    },
+    "launched_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "stores": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "steam",
+          "itch",
+          "epic",
+          "switch",
+          "playstation",
+          "xbox",
+          "ios",
+          "android",
+          "web"
+        ]
+      }
+    },
+    "home_base": {
+      "type": "string"
+    },
+    "date_precision": {
+      "enum": [
+        "exact",
+        "month",
+        "quarter",
+        "unknown"
+      ]
+    },
+    "launch_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "launch_month": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}$"
+    },
+    "launch_quarter": {
+      "type": "string",
+      "pattern": "^\\d{4}-Q[1-4]$"
+    },
+    "release_type": {
+      "enum": [
+        "full",
+        "ea",
+        "free",
+        "unsure"
+      ]
+    },
+    "ea_1_0_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "store_page": {
+      "enum": [
+        "public",
+        "built",
+        "none"
+      ]
+    },
+    "store_url": {
+      "type": "string"
+    },
+    "demo": {
+      "enum": [
+        "have",
+        "planning",
+        "none"
+      ]
+    },
+    "demo_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "team": {
+      "enum": [
+        "solo",
+        "small",
+        "mid",
+        "publisher"
+      ]
+    },
+    "hours": {
+      "enum": [
+        "lt3",
+        "3to6",
+        "6to12",
+        "12plus"
+      ]
+    },
+    "budget": {
+      "enum": [
+        "zero",
+        "lt500",
+        "500to2500",
+        "gt2500",
+        "private"
+      ]
+    },
+    "genre": {
+      "type": "string"
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "capsule",
+          "screenshots",
+          "trailer",
+          "press_kit",
+          "website",
+          "demo"
+        ]
+      }
+    },
+    "festival": {
+      "type": "string"
+    },
+    "steam_first_game": {
+      "type": "boolean"
+    },
+    "appid_created": {
+      "type": "string",
+      "format": "date"
+    },
+    "custom_dates": {
+      "type": "object"
+    },
+    "checkin": {
+      "type": "string"
+    },
+    "prompt_cadence": {
+      "enum": [
+        "weekdays",
+        "three",
+        "weekly",
+        "off"
+      ]
+    },
+    "timezone": {
+      "type": "string"
+    }
+  }
+}

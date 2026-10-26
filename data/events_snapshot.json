@@ -1,0 +1,178 @@
+{
+  "verified_on": "2026-10-25",
+  "time_zone_note": "Steam lists times in Pacific time. Deadlines are 11:59 PM Pacific on the date shown.",
+  "nextfest": [
+    {
+      "id": "nextfest_oct_2026",
+      "name": "Steam Next Fest: October 2026",
+      "start": "2026-10-19",
+      "end": "2026-10-26",
+      "registration_deadline": null,
+      "status": "running or past"
+    },
+    {
+      "id": "nextfest_feb_2027",
+      "name": "Steam Next Fest: February 2027",
+      "start": "2027-02-22",
+      "end": "2027-03-01",
+      "registration_deadline": "2027-01-10",
+      "trailer_pull": "2027-01-18",
+      "press_preview_submit": "2027-01-18",
+      "all_items_due": "2027-02-01",
+      "press_preview": "2027-02-11",
+      "trailer_opt_out": "2027-02-11",
+      "qa_session": "2026-12-08",
+      "source": "nextfest_feb_2027"
+    },
+    {
+      "id": "nextfest_jun_2027",
+      "name": "Steam Next Fest: June 2027",
+      "start": "2027-06-14",
+      "end": "2027-06-21",
+      "registration_deadline": "2027-04-25",
+      "trailer_pull": "2027-05-03",
+      "press_preview_submit": "2027-05-10",
+      "all_items_due": "2027-05-24",
+      "press_preview": "2027-06-03",
+      "trailer_opt_out": "2027-06-03",
+      "qa_session": null,
+      "source": "nextfest_jun_2027"
+    }
+  ],
+  "seasonal_sales": [
+    {
+      "name": "Winter Sale 2026",
+      "start": "2026-12-17",
+      "end": "2027-01-04"
+    },
+    {
+      "name": "Spring Sale 2027",
+      "start": "2027-03-18",
+      "end": "2027-03-25"
+    },
+    {
+      "name": "Summer Sale 2027",
+      "start": "2027-06-24",
+      "end": "2027-07-08"
+    },
+    {
+      "name": "Autumn Sale 2027",
+      "start": null,
+      "end": null,
+      "note": "TBD on the official page"
+    }
+  ],
+  "themed_fests": [
+    {
+      "name": "Steam Scream V",
+      "start": "2026-10-26",
+      "end": "2026-11-02",
+      "genres": [
+        "horror"
+      ]
+    },
+    {
+      "name": "Auto-Battler RPG Fest",
+      "start": "2026-11-16",
+      "end": "2026-11-23",
+      "genres": [
+        "rpg",
+        "strategy"
+      ]
+    },
+    {
+      "name": "Desktop Companion Fest",
+      "start": "2027-01-14",
+      "end": "2027-01-18",
+      "genres": [
+        "sim",
+        "other"
+      ]
+    },
+    {
+      "name": "Shop Keeper Fest",
+      "start": "2027-01-25",
+      "end": "2027-02-01",
+      "genres": [
+        "sim"
+      ]
+    },
+    {
+      "name": "Sheep Fest",
+      "start": "2027-02-04",
+      "end": "2027-02-08",
+      "genres": [
+        "other"
+      ]
+    },
+    {
+      "name": "Couch Co-Op Fest",
+      "start": "2027-02-08",
+      "end": "2027-02-15",
+      "genres": [
+        "multiplayer"
+      ]
+    },
+    {
+      "name": "Rhythm Fest",
+      "start": "2027-03-08",
+      "end": "2027-03-15",
+      "genres": [
+        "action",
+        "other"
+      ]
+    },
+    {
+      "name": "Dinos vs. Robots Fest",
+      "start": "2027-03-29",
+      "end": "2027-04-05",
+      "genres": [
+        "other"
+      ]
+    },
+    {
+      "name": "Racing Fest",
+      "start": "2027-04-12",
+      "end": "2027-04-19",
+      "genres": [
+        "action",
+        "other"
+      ]
+    },
+    {
+      "name": "Witch Fest",
+      "start": "2027-04-22",
+      "end": "2027-04-26",
+      "genres": [
+        "story",
+        "other"
+      ]
+    },
+    {
+      "name": "Fighting Fest",
+      "start": "2027-04-26",
+      "end": "2027-05-03",
+      "genres": [
+        "action"
+      ]
+    },
+    {
+      "name": "Real-Time Strategy Fest",
+      "start": "2027-05-10",
+      "end": "2027-05-17",
+      "genres": [
+        "strategy"
+      ]
+    },
+    {
+      "name": "Mountaineering Fest",
+      "start": "2027-05-31",
+      "end": "2027-06-03",
+      "genres": [
+        "sim",
+        "other"
+      ]
+    }
+  ],
+  "themed_note": "Genre links are only hints for which events to look at. Steam decides eligibility from your tags and whether the game is primarily about the theme, and sends invitations."
+}

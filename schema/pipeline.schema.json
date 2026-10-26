@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Outreach list. Only people the owner approved adding.",
+  "type": "object",
+  "properties": {
+    "people": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "kind",
+          "public_link",
+          "read_on",
+          "status"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "creator",
+              "writer",
+              "outlet",
+              "curator"
+            ]
+          },
+          "public_link": {
+            "type": "string"
+          },
+          "read_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "audience_shown": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "public_contact": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "found",
+              "drafted",
+              "approved",
+              "sent_by_owner",
+              "replied",
+              "covered",
+              "declined"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

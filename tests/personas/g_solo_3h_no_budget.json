@@ -1,0 +1,25 @@
+{
+  "today": "2026-10-26",
+  "profile": {
+    "game_name": "Pocket Orchard",
+    "stage": "slice",
+    "stores": [
+      "steam"
+    ],
+    "home_base": "steam",
+    "date_precision": "exact",
+    "launch_date": "2027-04-20",
+    "release_type": "full",
+    "store_page": "none",
+    "demo": "none",
+    "team": "solo",
+    "hours": "lt3",
+    "budget": "zero",
+    "genre": "sim",
+    "channels": [],
+    "assets": [
+      "screenshots"
+    ],
+    "festival": "ask"
+  }
+}

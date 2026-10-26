@@ -1,0 +1,107 @@
+{
+  "phases": [
+    {
+      "id": "groundwork",
+      "name": "Groundwork",
+      "order": 1,
+      "window": "Until a public reveal, or more than 52 weeks out",
+      "focus": "Your hook, your player, comparable games, tags, store accounts, home base."
+    },
+    {
+      "id": "reveal",
+      "name": "Reveal",
+      "order": 2,
+      "window": "When the store page goes public, ideally 9 to 12 months out (guideline)",
+      "focus": "Coming Soon page, art to spec, first trailer, simple website, press kit, tracking links."
+    },
+    {
+      "id": "grow",
+      "name": "Grow",
+      "order": 3,
+      "window": "36 to 12 weeks out",
+      "focus": "A steady content rhythm, playtests, creator and curator list, themed events that fit."
+    },
+    {
+      "id": "showcase",
+      "name": "Showcase",
+      "order": 4,
+      "window": "Around your chosen festival, usually 20 to 8 weeks out",
+      "focus": "Demo, festival checklist and dates, demo notice to wishlisters."
+    },
+    {
+      "id": "final_approach",
+      "name": "Final approach",
+      "order": 5,
+      "window": "8 to 1 weeks out",
+      "focus": "Store page final pass, build review, date lock, launch discount, keys, outreach, launch trailer, run sheet."
+    },
+    {
+      "id": "launch_window",
+      "name": "Launch window",
+      "order": 6,
+      "window": "7 days before to 7 days after launch",
+      "focus": "Daily mode: run sheet, announcements, replies, fixes."
+    },
+    {
+      "id": "first_month",
+      "name": "First month",
+      "order": 7,
+      "window": "Days 8 to 30 after launch",
+      "focus": "Reviews, updates, 30-day discount rule, first seasonal sale."
+    },
+    {
+      "id": "long_tail",
+      "name": "Long tail",
+      "order": 8,
+      "window": "Day 31 onward",
+      "focus": "Sales and events, updates, a gentle discount ladder, next project."
+    }
+  ],
+  "phase_by_days_to_launch": [
+    {
+      "min": 253,
+      "phase": "groundwork_or_reveal"
+    },
+    {
+      "min": 57,
+      "phase": "grow_or_showcase"
+    },
+    {
+      "min": 8,
+      "phase": "final_approach"
+    },
+    {
+      "min": -7,
+      "phase": "launch_window"
+    },
+    {
+      "min": -30,
+      "phase": "first_month"
+    },
+    {
+      "min": -100000,
+      "phase": "long_tail"
+    }
+  ],
+  "sprint_if_days_to_launch_below": 84,
+  "sprint_rule": "Phases 2 to 5 merge into one Sprint. Keep gates and priority 1 tasks; lower priority tasks that are already late are skipped by the plan, not by the owner.",
+  "showcase_window_days_before_festival": 70,
+  "hours_budget": {
+    "lt3": 3,
+    "3to6": 5,
+    "6to12": 9,
+    "12plus": 14
+  },
+  "max_tasks_per_week": {
+    "lt3": 3,
+    "3to6": 5,
+    "6to12": 7,
+    "12plus": 7
+  },
+  "working_date_rules": {
+    "exact": "the date",
+    "month": "the 15th, moved to the next weekday if it falls on a weekend",
+    "quarter": "the 15th of the middle month, moved to the next weekday if needed",
+    "unknown": "none, plan runs undated"
+  }
+}

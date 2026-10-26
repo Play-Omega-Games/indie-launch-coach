@@ -1,0 +1,25 @@
+{
+  "today": "2026-10-26",
+  "profile": {
+    "game_name": "Lantern Keeper",
+    "stage": "slice",
+    "stores": [
+      "steam"
+    ],
+    "home_base": "steam",
+    "date_precision": "exact",
+    "launch_date": "2027-06-29",
+    "release_type": "full",
+    "store_page": "none",
+    "demo": "planning",
+    "team": "solo",
+    "hours": "6to12",
+    "budget": "zero",
+    "genre": "story",
+    "channels": [
+      "x"
+    ],
+    "assets": [],
+    "festival": "ask"
+  }
+}

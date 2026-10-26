@@ -1,0 +1,140 @@
+{
+  "platforms": {
+    "steam": {
+      "name": "Steam",
+      "home_base_metric": "wishlists",
+      "home_base_link": "Steam store page",
+      "setup": [
+        "Steamworks account and paperwork",
+        "Steam Direct fee ($100 per app, recouped after $1,000 adjusted gross revenue)",
+        "App created"
+      ],
+      "sources": [
+        "steam_fee",
+        "steam_release",
+        "steam_coming_soon"
+      ]
+    },
+    "itch": {
+      "name": "itch.io",
+      "home_base_metric": "followers",
+      "home_base_link": "itch.io page",
+      "setup": [
+        "Free account",
+        "Page as Draft, then Public or Public restricted"
+      ],
+      "notes": "Free to use with open revenue sharing. No review gate, so timing is up to you.",
+      "sources": [
+        "itch_start",
+        "itch_faq",
+        "itch_design",
+        "itch_jams"
+      ]
+    },
+    "epic": {
+      "name": "Epic Games Store",
+      "home_base_metric": "follows or wishlists you track",
+      "home_base_link": "Epic store page",
+      "setup": [
+        "Developer Portal organization",
+        "$100 submission fee per product, recouped after $1,000 revenue",
+        "Trader, tax and payout verification"
+      ],
+      "notes": "Epic suggests publishing the product page at your announcement for early awareness.",
+      "sources": [
+        "epic_overview",
+        "epic_onboarding"
+      ]
+    },
+    "switch": {
+      "name": "Nintendo Switch",
+      "group": "console",
+      "home_base_metric": "none public",
+      "setup": [
+        "Register on the Nintendo Developer Portal"
+      ],
+      "notes": "Program terms and certification steps are under NDA. Enter your own dates.",
+      "sources": [
+        "nintendo_portal"
+      ]
+    },
+    "playstation": {
+      "name": "PlayStation",
+      "group": "console",
+      "home_base_metric": "none public",
+      "setup": [
+        "Apply through PlayStation Partners"
+      ],
+      "notes": "Program terms and certification steps are under NDA. Enter your own dates.",
+      "sources": [
+        "playstation_partners"
+      ]
+    },
+    "xbox": {
+      "name": "Xbox",
+      "group": "console",
+      "home_base_metric": "none public",
+      "setup": [
+        "Apply to ID@Xbox (18 or older or a parent or guardian, an NDA, and a country Microsoft does business with)"
+      ],
+      "notes": "Certification steps are shared after you join. Enter your own dates.",
+      "sources": [
+        "xbox_id"
+      ]
+    },
+    "ios": {
+      "name": "iOS App Store",
+      "group": "mobile",
+      "home_base_metric": "pre-orders you track",
+      "setup": [
+        "Apple Developer Program",
+        "App Store Connect record",
+        "App Review"
+      ],
+      "notes": "Pre-orders: release 2 to 180 days after the pre-order is published for a new app.",
+      "sources": [
+        "apple_preorders",
+        "apple_product_page",
+        "apple_review"
+      ]
+    },
+    "android": {
+      "name": "Google Play",
+      "group": "mobile",
+      "home_base_metric": "pre-registrations you track",
+      "setup": [
+        "Play Console account",
+        "Testing requirements for new personal accounts",
+        "Store listing"
+      ],
+      "notes": "Pre-registration lasts at most 90 days; up to two apps at a time.",
+      "sources": [
+        "play_prereg",
+        "play_testing",
+        "play_release",
+        "play_preview_assets"
+      ]
+    },
+    "web": {
+      "name": "Web browser",
+      "home_base_metric": "signups or follows you track",
+      "home_base_link": "your game page",
+      "setup": [
+        "A page that loads fast and works on phones"
+      ],
+      "notes": "No store gates. Treat your own page or itch.io page as home base.",
+      "sources": []
+    }
+  },
+  "groups": {
+    "console": [
+      "switch",
+      "playstation",
+      "xbox"
+    ],
+    "mobile": [
+      "ios",
+      "android"
+    ]
+  }
+}
