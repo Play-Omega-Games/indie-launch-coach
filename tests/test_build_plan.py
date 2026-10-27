@@ -112,7 +112,7 @@ class Personas(unittest.TestCase):
         self.assertEqual(gate(p, 'console_switch')['status'], 'waiting on platform')
         self.assertEqual(p['festival'], 'nextfest_jun_2027')
         self.assertEqual(task(p, 'rv_short_desc')['status'], 'done')   # page built
-        self.assertEqual(task(p, 'rv_submit_cs')['status'], 'catch_up')
+        self.assertEqual(task(p, 'rv_submit_cs')['status'], 'open')  # first build: nothing overdue on day one
         self.assertIsNotNone(task(p, 'gw_console_apply'))
         self.assertIsNone(gate(p, 'steam_keys_wait'))
 
@@ -184,6 +184,26 @@ class DateMoves(unittest.TestCase):
         base = plan_for('a_steam_8_months_no_page', today=today)
         p = plan_for('a_steam_8_months_no_page', today=today, prev=base, launch_date='2027-07-20')
         self.assertIn('steam_date_locked', [w['id'] for w in p['warnings']])
+
+
+class Regressions(unittest.TestCase):
+    def test_coming_soon_target_does_not_slide(self):
+        p0 = plan_for('a_steam_8_months_no_page')
+        p1 = plan_for('a_steam_8_months_no_page', today=TODAY + dt.timedelta(days=7), prev=p0)
+        self.assertEqual(gate(p1, 'steam_coming_soon')['date'], gate(p0, 'steam_coming_soon')['date'])
+        self.assertEqual(task(p1, 'gw_hook')['due'], task(p0, 'gw_hook')['due'])
+    def test_registered_festival_kept_after_registration_closes(self):
+        p0 = plan_for('b_month_known_page_live_demo')
+        for t in p0['tasks']:
+            if t['id'] == 'sc_register':
+                t['status'] = 'done'
+        p1 = plan_for('b_month_known_page_live_demo', today=dt.date(2027, 1, 20), prev=p0)
+        self.assertEqual(p1['festival'], 'nextfest_feb_2027')
+        self.assertFalse([w for w in p1['warnings'] if w['id'] == 'festival_no_longer_fits'])
+    def test_setup_answers_close_tasks(self):
+        p = plan_for('b_month_known_page_live_demo')
+        self.assertEqual(task(p, 'gw_home_base')['status'], 'done')
+        self.assertEqual(task(p, 'gw_channels')['status'], 'done')
 
 if __name__ == '__main__':
     unittest.main()

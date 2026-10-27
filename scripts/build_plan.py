@@ -168,6 +168,18 @@ def build(profile, today, data, prev=None):
                 CS = cs_earliest
         else:
             CS = cs_earliest
+        # Keep the Coming Soon target from the last build while it is still reachable,
+        # so weekly rebuilds do not quietly slide it forward.
+        same_date = prev and prev.get('launch_date') == (L.isoformat() if L else None)
+        pcs = pd(prev.get('coming_soon_target')) if prev else None
+        if same_date and pcs and CS and pcs < CS:
+            if add_bdays(pcs, -7) >= today:
+                CS = pcs
+            else:
+                warnings.append({'id': 'coming_soon_slipped', 'text':
+                    'The store page submission date in your plan (%s) has passed. If you already submitted it, tell me and I will mark it done. '
+                    'Otherwise the earliest your page can be public is now %s.' % (display_date(add_bdays(pcs, -7), 'exact'), display_date(CS, 'exact')),
+                    'source': 'steam_coming_soon'})
 
     # ---- Festival (Steam Next Fest) ----
     fest_options = []
@@ -196,10 +208,20 @@ def build(profile, today, data, prev=None):
         if match:
             chosen = match[0]
         else:
+            # Keep an edition the owner already registered for after its registration closes.
+            ed = [x for x in snap['nextfest'] if x['id'] == fchoice]
+            registered = bool(prev) and any(t.get('id') == 'sc_register' and t.get('status') == 'done' for t in prev.get('tasks', []))
+            if ed and registered and (not L or L > pd(ed[0]['end'])):
+                e0 = ed[0]
+                chosen = {'id': e0['id'], 'name': e0['name'], 'start': e0['start'], 'end': e0['end'],
+                          'registration_deadline': e0.get('registration_deadline'),
+                          'press_preview_submit': e0.get('press_preview_submit'),
+                          'all_items_due': e0.get('all_items_due'), 'needs_demo_note': p.get('demo') == 'none'}
+        if not chosen:
             warnings.append({'id': 'festival_no_longer_fits', 'text':
                 'The festival you chose no longer fits this plan (it must end before your launch, its deadlines must still be open, and your page must be public by registration). '
                 'Pick another from the options, or skip festivals for now.', 'source': 'steam_nextfest'})
-    if steam and L and not launched and not fest_options:
+    if steam and L and not launched and not fest_options and not chosen:
         notes.append('No Steam Next Fest edition fits before this launch date. The plan leans on themed events, your demo notice and personal outreach.')
     if chosen and CS and not page_public:
         reg = pd(chosen['registration_deadline'])
@@ -226,7 +248,8 @@ def build(profile, today, data, prev=None):
         Dm = pd(p['demo_date'])
 
     L1 = pd(p.get('ea_1_0_date')) if ea else None
-    anchors = {'TODAY': today, 'L': L, 'CS': CS if CS else (today if page_public else None), 'D': Dm, 'L1': L1}
+    started = pd(prev.get('started_on') or prev.get('built_on')) if prev else today
+    anchors = {'TODAY': started, 'L': L, 'CS': CS if CS else (today if page_public else None), 'D': Dm, 'L1': L1}
     anchors.update(fest_dates)
 
     # ---- Gates ----
@@ -363,8 +386,14 @@ def build(profile, today, data, prev=None):
             status = 'done'
         elif 'page_built' in t['done_if'] and p.get('store_page') == 'built':
             status = 'done'
+        elif t['id'] == 'gw_home_base' and p.get('home_base'):
+            status = 'done'
+        elif t['id'] == 'gw_channels' and p.get('channels'):
+            status = 'done'
         if t['id'] in prev_status:
             status = prev_status[t['id']]
+        if status == 'open' and due and due < today and not prev and not launched and not sprint:
+            due = next_bday(today + ONE)  # first build: nothing is overdue on day one
         if status == 'open' and due and due < today:
             if launched:
                 status = 'past'
@@ -414,7 +443,7 @@ def build(profile, today, data, prev=None):
                 'source': 'steam_release_dates'})
 
     return {
-        'built_on': today.isoformat(), 'game': p.get('game_name') or 'Your game', 'stores': stores,
+        'built_on': today.isoformat(), 'started_on': started.isoformat(), 'game': p.get('game_name') or 'Your game', 'stores': stores,
         'home_base': p.get('home_base') or (stores[0] if stores else None),
         'launch_date': L.isoformat() if L else None, 'launch_display': display_date(L, prec), 'precision': prec,
         'days_to_launch': dtl, 'phase': phase, 'sprint': sprint, 'essentials_track': essentials,

@@ -18,7 +18,15 @@ IGNORE_PREFIX = ('https://raw.githubusercontent.com/Play-Omega-Games/indie-launc
 
 def collect():
     urls = {}
-    for d, dirs, files in os.walk(ROOT):
+    # Only the library itself: never the owner's own files (profile, plan, metrics, outreach list).
+    roots = [os.path.join(ROOT, x) for x in ('data', 'templates', 'playbook', 'README.md')]
+    walk = []
+    for r in roots:
+        if os.path.isfile(r):
+            walk.append((os.path.dirname(r), [], [os.path.basename(r)]))
+        elif os.path.isdir(r):
+            walk.extend(os.walk(r))
+    for d, dirs, files in walk:
         dirs[:] = [x for x in dirs if x not in SKIP_DIRS]
         for f in files:
             if not f.endswith(('.md', '.json', '.py')):

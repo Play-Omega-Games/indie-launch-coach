@@ -8,12 +8,6 @@
       "parse": "steam_upcoming"
     },
     {
-      "id": "nextfest_oct_2026",
-      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
-      "what": "Next Fest October 2026 edition dates",
-      "parse": "nextfest_edition"
-    },
-    {
       "id": "nextfest_feb_2027",
       "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/feb_2027",
       "what": "Next Fest February 2027 edition dates",
