@@ -1502,11 +1502,11 @@
   },
   {
    "id": "sc_creator_demo",
-   "title": "Send demo invites to creators on your list (you send)",
-   "why": "A playable demo is an easy yes for a creator.",
+   "title": "Send your live demo to creators on your list (you send)",
+   "why": "Once the demo is public, a link is an easy yes for a creator, and no keys are needed.",
    "phase": "showcase",
-   "anchor": "F",
-   "offset_days": -14,
+   "anchor": "D",
+   "offset_days": 0,
    "effort_hours": 3,
    "priority": 1,
    "platforms": [

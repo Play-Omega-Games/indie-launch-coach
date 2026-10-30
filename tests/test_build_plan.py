@@ -70,8 +70,10 @@ class Personas(unittest.TestCase):
         self.assertEqual(gate(p, 'steam_build_submit')['date'], '2027-05-06')
         self.assertEqual(gate(p, 'nextfest_registration_deadline')['date'], '2027-01-10')
         self.assertEqual(gate(p, 'nextfest_all_items_due')['date'], '2027-02-01')
-        self.assertEqual(gate(p, 'steam_demo_notice')['date'], '2027-03-07')
-        self.assertEqual(task(p, 'sc_register')['due'], '2027-01-03')
+        # demo date: the business day before the festival (Sun Feb 21 rolls back to Fri Feb 19)
+        self.assertEqual(p['demo_date'], '2027-02-19')
+        self.assertEqual(gate(p, 'steam_demo_notice')['date'], '2027-03-05')
+        self.assertEqual(task(p, 'sc_register')['due'], '2026-12-31')  # Sun Jan 3 rolls back past New Year's Day
         self.assertIn('Summer Sale 2027', gate(p, 'steam_first_seasonal_sale')['title'])
         self.assertIsNone(gate(p, 'steam_keys_wait'))
         self.assertIsNotNone(task(p, 'gr_paid_test'))
@@ -119,9 +121,9 @@ class Personas(unittest.TestCase):
     def test_g_essentials(self):
         p = plan_for('g_solo_3h_no_budget')
         self.assertTrue(p['essentials_track'])
-        self.assertLessEqual(len(p['this_week']), 3)
+        self.assertEqual(len(p['this_week']), 3)
         hours = sum(t['effort_hours'] for t in p['tasks'] if t['id'] in p['this_week'])
-        self.assertLessEqual(hours, 3)
+        self.assertLessEqual(hours, 3.6)  # 3 hour budget, topped up by at most a fifth to reach 3 tasks
         self.assertIsNone(task(p, 'gr_paid_test'))
         self.assertIsNone(task(p, 'gr_devlog'))
 
@@ -204,6 +206,88 @@ class Regressions(unittest.TestCase):
         p = plan_for('b_month_known_page_live_demo')
         self.assertEqual(task(p, 'gw_home_base')['status'], 'done')
         self.assertEqual(task(p, 'gw_channels')['status'], 'done')
+
+K = 'k_page_public_demo_planned_festival'
+SETUP = dt.date(2026, 10, 30)  # a Friday
+
+def mark_done(plan, ids):
+    for t in plan['tasks']:
+        if t['id'] in ids:
+            t['status'] = 'done'
+    return plan
+
+class LiveTestRegressions(unittest.TestCase):
+    """Bugs from the Oct 30, 2026 live self-test."""
+    def test_due_dates_are_business_days(self):
+        offsets = {t['id']: t['offset_days'] for t in DATA['tasks']['tasks']}
+        names = [f[:-5] for f in sorted(os.listdir(os.path.join(HERE, 'personas')))]
+        for name in names:
+            for today in (TODAY, SETUP, dt.date(2026, 11, 7)):
+                p = plan_for(name, today=today)
+                for t in p['tasks']:
+                    if t['due'] and offsets[t['id']] != 0:
+                        self.assertTrue(bp.is_bday(dt.date.fromisoformat(t['due'])), (name, today, t['id'], t['due']))
+    def test_rolled_dates_stay_before_their_deadline(self):
+        p = plan_for(K, today=SETUP)
+        self.assertLess(task(p, 'sc_register')['due'], gate(p, 'nextfest_registration_deadline')['date'])
+        self.assertLess(task(p, 'sc_demo_live')['due'], gate(p, 'nextfest_start')['date'])
+        self.assertEqual(task(p, 'rv_utm')['due'], '2026-11-02')  # Sat Oct 31 moves on to Monday
+    def test_day_one_grace_survives_first_rebuild(self):
+        p0 = plan_for(K, today=SETUP)
+        self.assertFalse([t for t in p0['tasks'] if t['status'] == 'catch_up'])
+        graced = [t['id'] for t in p0['tasks'] if t.get('day_one_grace')]
+        self.assertIn('gr_playtest', graced)
+        p1 = plan_for(K, today=dt.date(2026, 11, 2), prev=p0)
+        self.assertFalse([t for t in p1['tasks'] if t['status'] == 'catch_up'])
+        for tid in graced:
+            self.assertEqual(task(p1, tid)['due'], task(p0, tid)['due'], tid)
+        # the grace is one-off: still not done a week later means catch up
+        p2 = plan_for(K, today=dt.date(2026, 11, 9), prev=p1)
+        self.assertEqual(task(p2, 'gr_playtest')['status'], 'catch_up')
+    def test_public_page_tasks_do_not_slide(self):
+        p0 = plan_for(K, today=SETUP)
+        p1 = plan_for(K, today=dt.date(2026, 11, 9), prev=p0)
+        self.assertEqual(p1['page_public_on'], '2026-10-30')
+        self.assertEqual(task(p1, 'gr_rhythm')['due'], task(p0, 'gr_rhythm')['due'])
+        # a page that goes public later is dated from the check-in that reported it
+        a0 = plan_for('a_steam_8_months_no_page')
+        a1 = plan_for('a_steam_8_months_no_page', today=dt.date(2026, 12, 7), prev=a0, store_page='public')
+        self.assertEqual(a1['page_public_on'], '2026-12-07')
+        self.assertEqual(task(a1, 'gr_rhythm')['due'], '2026-12-14')
+    def test_this_week_has_at_least_three(self):
+        p0 = plan_for(K, today=SETUP)
+        # everything due this year is done except one 4 hour task, now in catch up
+        p0 = mark_done(p0, [t['id'] for t in p0['tasks'] if t['id'] != 'gr_playtest' and t['due'] and t['due'] <= '2026-12-31'])
+        p1 = plan_for(K, today=dt.date(2026, 11, 9), prev=p0)
+        self.assertIn('gr_playtest', p1['this_week'])
+        self.assertGreaterEqual(len(p1['this_week']), 3)
+        hours = sum(t['effort_hours'] for t in p1['tasks'] if t['id'] in p1['this_week'])
+        self.assertLessEqual(hours, p1['hours_budget'] + 1)
+        for name in [f[:-5] for f in sorted(os.listdir(os.path.join(HERE, 'personas')))]:
+            p = plan_for(name)
+            open_n = len([t for t in p['tasks'] if t['status'] in ('open', 'catch_up')])
+            self.assertGreaterEqual(len(p['this_week']), min(3, open_n), name)
+    def test_public_page_needs_evidence_for_trailer_and_reveal(self):
+        p = plan_for(K, today=SETUP)
+        self.assertEqual(task(p, 'rv_trailer1')['status'], 'open')    # no trailer in assets
+        self.assertEqual(task(p, 'rv_announce')['status'], 'open')
+        self.assertEqual(task(p, 'rv_profiles')['status'], 'open')
+        self.assertEqual(task(p, 'rv_capsules')['status'], 'done')    # Steam needs it for a public page
+        self.assertEqual(task(p, 'rv_submit_cs')['status'], 'done')
+        q = plan_for(K, today=SETUP, assets=['capsule', 'screenshots', 'trailer'])
+        self.assertEqual(task(q, 'rv_trailer1')['status'], 'done')
+    def test_budget_answer_closes_budget_task(self):
+        self.assertEqual(task(plan_for(K, today=SETUP), 'gw_budget')['status'], 'done')
+        self.assertEqual(task(plan_for(K, today=SETUP, budget='private'), 'gw_budget')['status'], 'open')
+    def test_creator_demo_invites_after_demo_is_public(self):
+        p = plan_for(K, today=SETUP)
+        t = task(p, 'sc_creator_demo')
+        self.assertGreaterEqual(t['due'], p['demo_date'])
+        self.assertGreaterEqual(t['due'], task(p, 'dm_demo_release')['due'])
+        self.assertIn('no keys are needed', t['why'])
+        # a festival with no demo date yet still dates it before the festival
+        q = plan_for(K, today=SETUP, demo='none')
+        self.assertEqual(task(q, 'sc_creator_demo')['due'], '2027-02-19')
 
 if __name__ == '__main__':
     unittest.main()

@@ -80,6 +80,24 @@ def next_bday(d):
         d += ONE
     return d
 
+def prev_bday(d):
+    while not is_bday(d):
+        d -= ONE
+    return d
+
+def roll_due(due, offset, today):
+    """Move a task due date off weekends and US federal holidays.
+    Work due before its anchor moves earlier, so it still lands before the anchor;
+    work due after its anchor moves later, so it never comes before the event.
+    A task on the anchor day itself keeps that day (it is the event)."""
+    if due is None or offset == 0 or is_bday(due):
+        return due
+    if offset < 0:
+        back = prev_bday(due)
+        # do not pull a not-yet-due task into the past; move it forward instead
+        return back if (back >= today or due < today) else next_bday(due)
+    return next_bday(due)
+
 def next_weekday(d):
     while d.weekday() >= 5:
         d += ONE
@@ -241,15 +259,21 @@ def build(profile, today, data, prev=None):
         if pd(p.get('demo_date')):
             Dm = pd(p['demo_date'])
         elif F:
-            Dm = F - ONE
+            Dm = prev_bday(F - ONE)
         elif L and not launched:
-            Dm = L - dt.timedelta(days=56)
+            Dm = prev_bday(L - dt.timedelta(days=56))
     elif demo == 'have' and pd(p.get('demo_date')) and pd(p['demo_date']) >= today:
         Dm = pd(p['demo_date'])
 
     L1 = pd(p.get('ea_1_0_date')) if ea else None
     started = pd(prev.get('started_on') or prev.get('built_on')) if prev else today
-    anchors = {'TODAY': started, 'L': L, 'CS': CS if CS else (today if page_public else None), 'D': Dm, 'L1': L1}
+    # A public page is dated from the first build that saw it public (setup, or the check-in
+    # where the owner said it went live), so its follow-up tasks keep their dates on weekly
+    # rebuilds instead of sliding with today.
+    public_on = None
+    if page_public:
+        public_on = (pd(prev.get('page_public_on')) if prev else None) or today
+    anchors = {'TODAY': started, 'L': L, 'CS': CS if CS else public_on, 'D': Dm, 'L1': L1}
     anchors.update(fest_dates)
 
     # ---- Gates ----
@@ -356,11 +380,17 @@ def build(profile, today, data, prev=None):
     sprint = bool(L and not launched and dtl < ph['sprint_if_days_to_launch_below'])
 
     # ---- Tasks ----
-    prev_status = {}
+    prev_status, prev_grace = {}, {}
     if prev:
         for t in prev.get('tasks', []):
             if t.get('status') in ('done', 'skipped'):
                 prev_status[t['id']] = t['status']
+            elif t.get('day_one_grace') and t.get('due'):
+                prev_grace[t['id']] = pd(t['due'])
+    # Store page work Steam requires before a page can go public. Only these are
+    # implied done by a public page; trailer, reveal posts and profiles need the owner's word.
+    page_implies = lambda t: t['anchor'] == 'CS' and t['offset_days'] <= 0 and t['platforms'] == ['steam']
+    budget_set = p.get('budget') in ('zero', 'lt500', '500to2500', 'gt2500')
     order = {x['id']: x['order'] for x in ph['phases']}
     tasks = []
     for t in data['tasks']['tasks']:
@@ -376,11 +406,15 @@ def build(profile, today, data, prev=None):
         if essentials and not t['essentials']: continue
         if launched and order[t['phase']] < order['launch_window']: continue
         anchor = anchors.get(t['anchor'])
+        if anchor is None and t['anchor'] == 'D' and 'festival' in r and F:
+            anchor = prev_bday(F - ONE)  # a festival demo has to be live before the festival starts
         due = anchor + dt.timedelta(days=t['offset_days']) if anchor else None
+        due = roll_due(due, t['offset_days'], today)
         status = 'open'
+        grace = False
         if t['asset'] and t['asset'] in assets:
             status = 'done'
-        elif t['anchor'] == 'CS' and page_public and t['offset_days'] <= 0:
+        elif page_public and page_implies(t):
             status = 'done'
         elif 'page_exists' in t['done_if'] and (page_public or p.get('store_page') == 'built' or p.get('appid_created')):
             status = 'done'
@@ -390,10 +424,16 @@ def build(profile, today, data, prev=None):
             status = 'done'
         elif t['id'] == 'gw_channels' and p.get('channels'):
             status = 'done'
+        elif t['id'] == 'gw_budget' and budget_set:
+            status = 'done'
         if t['id'] in prev_status:
             status = prev_status[t['id']]
-        if status == 'open' and due and due < today and not prev and not launched and not sprint:
-            due = next_bday(today + ONE)  # first build: nothing is overdue on day one
+        if status == 'open' and due and due <= today and not prev and not launched and not sprint:
+            due = next_bday(today + ONE)  # first build: nothing is overdue or due on day one
+            grace = True
+        if status == 'open' and t['id'] in prev_grace and due and due < prev_grace[t['id']]:
+            due = prev_grace[t['id']]  # keep the day-one grace date on later rebuilds
+            grace = True
         if status == 'open' and due and due < today:
             if launched:
                 status = 'past'
@@ -405,6 +445,8 @@ def build(profile, today, data, prev=None):
                 'due': due.isoformat() if due else None, 'status': status, 'effort_hours': t['effort_hours'],
                 'priority': t['priority'], 'draft_tool': t['draft_tool'],
                 'source_urls': [data['sources']['sources'][s]['url'] for s in t['source_ids']]}
+        if grace:
+            item['day_one_grace'] = True
         if publisher and t['publisher_owned']:
             item['owner'] = 'confirm with publisher'
         tasks.append(item)
@@ -431,6 +473,21 @@ def build(profile, today, data, prev=None):
         if t['status'] == 'catch_up':
             cu += 1
             cu_hours += t['effort_hours']
+    # The coach promises at least 3 tasks a week (when that many are open). If one big
+    # task used up the hours, top up with quick tasks (1 hour or less), nearest due first,
+    # going over the budget by at most a fifth of it (1 hour at most).
+    min_tasks = min(3, max_tasks)
+    slack = min(1.0, round(hours_budget * 0.2, 1))
+    if len(week) < min_tasks:
+        pool = [t for t in cand if t['id'] not in week]
+        pool += sorted([t for t in tasks if t['status'] == 'open' and t['id'] not in week and t not in pool],
+                       key=lambda x: (x['due'] or '9999', x['priority']))
+        for t in pool:
+            if len(week) >= min_tasks:
+                break
+            if t['effort_hours'] <= 1 and used + t['effort_hours'] <= hours_budget + slack:
+                week.append(t['id'])
+                used += t['effort_hours']
 
     # ---- Date change log and recheck ----
     changes = list(prev.get('changes', [])) if prev else []
@@ -448,6 +505,7 @@ def build(profile, today, data, prev=None):
         'launch_date': L.isoformat() if L else None, 'launch_display': display_date(L, prec), 'precision': prec,
         'days_to_launch': dtl, 'phase': phase, 'sprint': sprint, 'essentials_track': essentials,
         'hours_budget': hours_budget, 'coming_soon_target': CS.isoformat() if CS else None,
+        'page_public_on': public_on.isoformat() if public_on else None,
         'festival_options': fest_options, 'festival': chosen['id'] if chosen else None,
         'demo_date': Dm.isoformat() if Dm else None, 'ea_1_0_date': L1.isoformat() if L1 else None,
         'gates': sorted(gates, key=lambda g: g['date'] or '9999'), 'tasks': tasks, 'this_week': week,

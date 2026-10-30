@@ -1,0 +1,32 @@
+{
+  "today": "2026-10-30",
+  "profile": {
+    "game_name": "Furrow Fields",
+    "stage": "slice",
+    "stores": [
+      "steam"
+    ],
+    "home_base": "steam",
+    "date_precision": "exact",
+    "launch_date": "2027-03-30",
+    "release_type": "full",
+    "store_page": "public",
+    "demo": "planning",
+    "team": "solo",
+    "hours": "3to6",
+    "budget": "zero",
+    "genre": "sim",
+    "channels": [
+      "x",
+      "discord"
+    ],
+    "assets": [
+      "capsule",
+      "screenshots"
+    ],
+    "festival": "nextfest_feb_2027",
+    "checkin": "Monday 09:00",
+    "prompt_cadence": "three",
+    "timezone": "America/New_York"
+  }
+}
