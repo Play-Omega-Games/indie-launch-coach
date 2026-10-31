@@ -408,8 +408,8 @@ def build(profile, today, data, prev=None):
         anchor = anchors.get(t['anchor'])
         if anchor is None and t['anchor'] == 'D' and 'festival' in r and F:
             anchor = prev_bday(F - ONE)  # a festival demo has to be live before the festival starts
-        due = anchor + dt.timedelta(days=t['offset_days']) if anchor else None
-        due = roll_due(due, t['offset_days'], today)
+        raw_due = anchor + dt.timedelta(days=t['offset_days']) if anchor else None
+        due = roll_due(raw_due, t['offset_days'], today)
         status = 'open'
         grace = False
         if t['asset'] and t['asset'] in assets:
@@ -431,6 +431,8 @@ def build(profile, today, data, prev=None):
         if status == 'open' and due and due <= today and not prev and not launched and not sprint:
             due = next_bday(today + ONE)  # first build: nothing is overdue or due on day one
             grace = True
+        elif status == 'open' and due and raw_due and due > raw_due and t['offset_days'] < 0 and not prev and not launched and not sprint:
+            grace = True  # first build moved weekend work forward past today; keep that date on rebuilds
         if status == 'open' and t['id'] in prev_grace and due and due < prev_grace[t['id']]:
             due = prev_grace[t['id']]  # keep the day-one grace date on later rebuilds
             grace = True
